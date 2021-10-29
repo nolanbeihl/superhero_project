@@ -7,14 +7,11 @@
     <title>Superhero detail</title>
 </head>
 <body>
-    <h1> List of Hero</h1>
+    <h1><h1>Details a</h1>
     <ul>
         {% for hero in all_heroes %}
-        <li><h2>{{hero.name}}</h2></li>
-        {% endfor %}
-        
-
-    </ul>
-    
+        <li><h2>{{hero.name}} - <a href="{% url 'superheroes:detail' hero.id %}">Click For Heroes Details</a></h2></li>
+        {% endfor %}</h1>
+   
 </body>
 </html>

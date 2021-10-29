@@ -9,6 +9,5 @@ urlpatterns = [
     path('new/', views.create, name='create'),
     path('update/', views.update, name='update'),
 
-
 ]
 

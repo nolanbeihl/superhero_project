@@ -40,3 +40,8 @@ def update(request):
         secondary = request.POST.get('secondary')
         catchphrase = request.POST.get('catchphrase')
         update_hero = Superhero(name=name, alter_ego=alter_ego,primary_ability=primary,secondary_ability=secondary,catch_phrase=catchphrase)
+        update_hero.update()
+        return HttpResponseRedirect(reverse('superheroes:index'))
+    else:
+        return render(request,'superheroes/update.html')
+
