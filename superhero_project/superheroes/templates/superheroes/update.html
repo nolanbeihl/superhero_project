@@ -7,13 +7,13 @@
     <title>Update Hero Attribrutes</title>
 </head>
 <body>
-    <form action="{% url 'superheroes:update'%}" method="post">
+    <form action="{% url 'superheroes:update'%}" method="put">
         {%csrf_token%}
-        Name: <input type="text" name="name" id="name"><br />
-        Alter Ego: <input type="text" name="alter_ego" id="alter_ego"><br />
-        Primary Ability: <input type="text" name="primary" id="primary"><br />
-        Secondary Ability: <input type="text" name="secondary" id="secondary"><br />
-        Catchphrase: <input type="text" name="catchphrase" id="catchphrase"><br />
+        Name: <input type="text" name="name.update" id="name"><br />
+        Alter Ego: <input type="text" name="alter_ego.Update" id="alter_ego"><br />
+        Primary Ability: <input type="text" name="primary_ability.update" id="primary"><br />
+        Secondary Ability: <input type="text" name="secondary_ability.update" id="secondary"><br />
+        Catchphrase: <input type="text" name="catch_phrase.update" id="catchphrase"><br />
         <input type="submit" value="Update!">
 
     </form>
