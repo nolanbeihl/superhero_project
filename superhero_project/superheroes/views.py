@@ -34,13 +34,14 @@ def create(request):
 
 def update(request):
     if request.method == "POST":
-        name = request.PUT.get('name')
-        alter_ego = request.PUT.get('alter_ego')
-        primary = request.PUT.get('primary')
-        secondary = request.PUT.get('secondary')
-        catchphrase = request.PUT.get('catchphrase')
+        name = request.POST.get('name')
+        alter_ego = request.POST.get('alter_ego')
+        primary = request.POST.get('primary')
+        secondary = request.POST.get('secondary')
+        catchphrase = request.POST.get('catchphrase')
         update_hero = Superhero(name=name, alter_ego=alter_ego,primary_ability=primary,secondary_ability=secondary,catch_phrase=catchphrase)
-        update_hero.update()
+        update_hero.save()
+
         return HttpResponseRedirect(reverse('superheroes:index'))
     else:
         return render(request,'superheroes/update.html')

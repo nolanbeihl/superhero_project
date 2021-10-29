@@ -9,13 +9,13 @@
 </head>
 <body>
     <h1><h1>Details About:</h1>
-    <h2>{{single_hero.name}} </h2>
+    <h2>{{single_hero.name}} </h2> <a href=(input
     <h2>{{single_hero.alter_ego}}</h2>
     <h2>{{single_hero.primary_ability}}</h2>
     <h2>{{single_hero.secondary_ability}}</h2>
     <h2>{{single_hero.catch_phrase}}</h2>
 
-    <a href="{% url 'superheroes/update' hero.id %}">Update Details</a>
+    <a href="{% url 'superheroes:update' %}">Update Details</a>
 
 
 </body>
