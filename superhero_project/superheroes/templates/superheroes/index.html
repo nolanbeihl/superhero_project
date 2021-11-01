@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <img src="{% static 'superheroes/Iron-man.jpg' %}" alt="Iron-man">
     <title>Superhero Index</title>
 </head>
 <body>
@@ -15,6 +17,6 @@
         
         <a href="{% url 'superheroes:create'%}">Add Someone New</a>
     </ul>
-    
+
 </body>
 </html>
