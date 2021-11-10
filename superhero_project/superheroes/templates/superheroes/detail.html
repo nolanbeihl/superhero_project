@@ -15,8 +15,8 @@
     <h2>{{single_hero.secondary_ability}}</h2>
     <h2>{{single_hero.catch_phrase}}</h2>
 
-    <a href="{% url 'superheroes:update' hero.id %}">Update Details</a>
-    <a href="{% url 'superheroes:delete' hero.id %}">Delete Hero</a>
+    <a href="{% url 'superheroes:update' single_hero.id %}">Update Details</a>
+    <a href="{% url 'superheroes:delete' single_hero.id %}">Delete Hero</a>
 
 </body>
 </html>
