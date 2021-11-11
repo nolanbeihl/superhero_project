@@ -1,5 +1,14 @@
-.bg {
-    background-image: 'superhero_project/superheroes/static/Iron-Man.jpg';
+a {
+  color: darkred;
+}
+.button {
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-emphasis-color: white;
+  margin: 3px;
+  size: 10px;
+  
 }
 
 .content {
@@ -12,7 +21,7 @@
   position:fixed;
   text-align:right;
   top:40%;
-  transform:translate(-50%, -50%);
+  transform:translate(-83%, -83%);
   animation-duration: 3s;
   animation-name: slidein;
   padding-top: 0px;
@@ -20,8 +29,8 @@
 }
 @keyframes slidein {
   from {
-    margin-left: 20%;
-    width: 90%;
+    margin-left: -80%;
+    width: 100%;
   }
 
   to {
@@ -34,11 +43,10 @@ h1 {
   font-family:monospace;
 }
 
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
 }
