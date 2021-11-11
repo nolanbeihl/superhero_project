@@ -7,22 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superhero detail</title>
     {% load static %}
+    <img src="{% static '/Superhero-logos.jpg/' %}" alt="Superhero-logos">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
 </head>
 <body>
+    <div class="content_a">
+        <div class="container">
     <h1><h1>Details About: {{single_hero.name}}</h1>
-    <h2>Super Hero Name: {{single_hero.name}} </h2>
-    <h2>Alter Ego: {{single_hero.alter_ego}}</h2>
-    <h2>Primary Ability: {{single_hero.primary_ability}}</h2>
-    <h2>Secondary Ability: {{single_hero.secondary_ability}}</h2>
-    <h2>Catch Phrase: {{single_hero.catch_phrase}}</h2>
+    <h3>Super Hero Name: {{single_hero.name}} </h3><br>
+    <h3>Alter Ego: {{single_hero.alter_ego}}</h3><br>
+    <h3>Primary Ability: {{single_hero.primary_ability}}</h3><br>
+    <h3>Secondary Ability: {{single_hero.secondary_ability}}</h3><br>
+    <h3>Catch Phrase: {{single_hero.catch_phrase}}</h3><br>
 
-    <a class="button" href="{% url 'superheroes:update' single_hero.id %}">Update Details</a>
+    <a class="btn btn-success btn-sm" href="{% url 'superheroes:update' single_hero.id %}">Update Details</a>
     <br>
-    <a class= "button" href="{% url 'superheroes:delete' single_hero.id %}">Delete Hero</a>
+    <a class="btn btn-success btn-sm" href="{% url 'superheroes:delete' single_hero.id %}">Delete Hero</a>
     <br>
-    <a class= "button" href="{% url 'superheroes:return' %}">Return to List</a>
-
+    <a class="btn btn-success btn-sm" href="{% url 'superheroes:return' %}">Return to List</a>
+        </div>
+    </div>
 </body>
 </html>

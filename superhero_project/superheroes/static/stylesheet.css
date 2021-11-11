@@ -3,12 +3,18 @@ a {
 }
 .button {
   border: none;
-  padding: 10px;
+  padding:none;
   text-align: center;
   text-emphasis-color: white;
   margin: 3px;
   size: 10px;
   
+}
+
+h3 {
+  color: rgb(41, 138, 109);
+  font-family: monospace;
+  font-weight: bolder;
 }
 
 .content {
@@ -19,9 +25,25 @@ a {
   left:70%;
   padding:none;
   position:fixed;
-  text-align:right;
+  text-align:center;
   top:40%;
-  transform:translate(-83%, -83%);
+  transform:translate(-50%, -50%);
+  animation-duration: 3s;
+  animation-name: slidein;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.content_a {
+  background-color:none;
+  border-radius:5px;
+  box-shadow:0 0 5px rgba(0,0,0,25px);
+  box-sizing:border-box;
+  left:50%;
+  padding:none;
+  position:fixed;
+  text-align:center;
+  top:40%;
+  transform:translate(-50%, -50%);
   animation-duration: 3s;
   animation-name: slidein;
   padding-top: 0px;
@@ -29,7 +51,7 @@ a {
 }
 @keyframes slidein {
   from {
-    margin-left: -80%;
+    margin-left: -60%;
     width: 100%;
   }
 

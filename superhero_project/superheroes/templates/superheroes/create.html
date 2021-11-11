@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Hero</title>
+    {% load static %}
+    <img src="{% static '/Superhero-logos.jpg/' %}" alt="Superhero-logos">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    
 </head>
 <body>
+    <div class="content">
+        <div class="container">
     <form action="{% url 'superheroes:create'%}" method="post">
         {%csrf_token%}
         Name: <input type="text" name="name" id="name"><br />
@@ -15,8 +22,13 @@
         Secondary Ability: <input type="text" name="secondary" id="secondary"><br />
         Catchphrase: <input type="text" name="catchphrase" id="catchphrase"><br />
         <input type="submit" value="Add!">
-
     </form>
+        <br>
+        <a class="btn btn-success btn-sm" href="{% url 'superheroes:return' %}">Return to List</a>
+
+
+        </div>
+    </div>
     
 </body>
 </html>
