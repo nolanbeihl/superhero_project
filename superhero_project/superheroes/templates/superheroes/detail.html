@@ -16,7 +16,10 @@
     <h2>Catch Phrase: {{single_hero.catch_phrase}}</h2>
 
     <a href="{% url 'superheroes:update' single_hero.id %}">Update Details</a>
+    <br>
     <a href="{% url 'superheroes:delete' single_hero.id %}">Delete Hero</a>
+    <br>
+    <a href="{url 'superheroes:index' %}">Return to List</a>
 
 </body>
 </html>
