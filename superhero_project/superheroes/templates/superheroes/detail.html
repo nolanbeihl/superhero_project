@@ -9,11 +9,11 @@
 </head>
 <body>
     <h1><h1>Details About:</h1>
-    <h2>{{single_hero.name}} </h2>
-    <h2>{{single_hero.alter_ego}}</h2>
-    <h2>{{single_hero.primary_ability}}</h2>
-    <h2>{{single_hero.secondary_ability}}</h2>
-    <h2>{{single_hero.catch_phrase}}</h2>
+    <h2>Super Hero Name: {{single_hero.name}} </h2>
+    <h2>Alter Ego: {{single_hero.alter_ego}}</h2>
+    <h2>Primary Ability: {{single_hero.primary_ability}}</h2>
+    <h2>Secondary Ability: {{single_hero.secondary_ability}}</h2>
+    <h2>Catch Phrase: {{single_hero.catch_phrase}}</h2>
 
     <a href="{% url 'superheroes:update' single_hero.id %}">Update Details</a>
     <a href="{% url 'superheroes:delete' single_hero.id %}">Delete Hero</a>

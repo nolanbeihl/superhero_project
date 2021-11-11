@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
+from superheroes import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
